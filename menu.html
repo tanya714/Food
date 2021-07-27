@@ -13,17 +13,39 @@
     <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
     <title>Menu Card</title>
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            text-align: center;
+            box-sizing: content-box;
+            border-collapse: separate;
+            margin-left: 10%;
+            margin-top: 5%;
+            display: flex;
+        }
+        
+        .col-lg-4 {
+            border-collapse: separate;
+            border: 20px solid #F08080;
+            margin-left: 15px;
+            margin-right: 15px;
+            width: fit-content;
+            height: fit-content;
+            margin-bottom: 10px;
+        }
+        
         body {
             background-color: #154360;
         }
         
         .burger {
-            width: 350px;
+            width: 300px;
             padding: 10px;
-            border: 23px solid #F08080;
-            height: 190px;
-            margin-left: 2cm;
-            font-size: 0.7cm;
+            height: fit-content;
+            font-size: 0.55cm;
             color: white;
         }
         
@@ -31,17 +53,11 @@
             background-color: #2E86C1;
         }
         
-        .c11 :hover {
-            transform: scale(1.02);
-        }
-        
         .momos {
             width: 300px;
             padding: 10px;
-            border: 23px solid #F08080;
-            height: 190px;
-            margin-left: 2cm;
-            font-size: 0.7cm;
+            height: fit-content;
+            font-size: 0.55cm;
             color: white;
         }
         
@@ -49,17 +65,11 @@
             background-color: #2E86C1;
         }
         
-        .c12 :hover {
-            transform: scale(1.02);
-        }
-        
         .fries {
             width: 300px;
             padding: 10px;
-            border: 23px solid #F08080;
-            height: 190px;
-            margin-left: 2cm;
-            font-size: 0.7cm;
+            height: fit-content;
+            font-size: 0.55cm;
             color: white;
         }
         
@@ -67,17 +77,11 @@
             background-color: #2E86C1;
         }
         
-        .c21 :hover {
-            transform: scale(1.02);
-        }
-        
         .indo {
             width: 300px;
             padding: 10px;
-            border: 23px solid #F08080;
-            height: auto;
-            margin-left: 2cm;
-            font-size: 0.7cm;
+            height: fit-content;
+            font-size: 0.55cm;
             color: white;
         }
         
@@ -86,29 +90,15 @@
         }
         
         .coffee {
-            width: 350px;
+            width: 300px;
             padding: 10px;
-            border: 23px solid #F08080;
-            height: auto;
-            margin-left: 2cm;
-            font-size: 0.7cm;
+            height: fit-content;
+            font-size: 0.55cm;
             color: white;
         }
         
         .coffee :hover {
             background-color: #2E86C1;
-        }
-        
-        .c22 :hover {
-            transform: scale(1.02);
-        }
-        
-        .c31 :hover {
-            transform: scale(1.02);
-        }
-        
-        .c32 :hover {
-            transform: scale(1.02);
         }
         
         .header {
@@ -128,13 +118,16 @@
             font-family: 'Aladin', cursive;
             text-align: center;
             font-size: 2rem;
+            letter-spacing: 0.9rem;
             color: IndianRed;
+            transition: all .7s ease-in;
+            animation: first 5s infinite;
         }
         
         .line {
             border: 5px #E9967A solid;
             border-radius: 10cm;
-            width: 60%;
+            width: 99%;
             align-items: center;
         }
         
@@ -188,12 +181,15 @@
             color: black;
         }
         
-        .c1 {
-            display: flex;
+        .col:hover {
+            border-radius: 10%;
+            transform: scale(1.1);
+            transition-duration: 1s;
         }
         
-        .c2 {
-            display: flex;
+        li:hover {
+            transform: scale(1.05);
+            transition-duration: 1s;
         }
         
         .item {
@@ -205,26 +201,58 @@
         }
         
         .nav {
-            width: 15%;
+            width: 100%;
             background-color: #F08080;
-            height: 1cm;
-            margin: auto;
+            height: 1.5cm;
             color: black;
             font-family: 'Aladin', cursive;
             text-align: center;
             font-size: 2rem;
             border-radius: 50px;
+            padding-left: 300px;
+            padding-top: 10px;
+            position: sticky;
         }
         
-        a:visited {
+        .nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+        
+        .nav ul li {
+            padding-left: 150px;
+        }
+        
+        .nav li a:visited {
             color: black;
             text-decoration: solid;
             cursor: grab;
         }
         
-        a:link:active,
-        a:visited:active {
+        a {
+            text-decoration-style: none;
             color: black;
+        }
+        
+        a:hover {
+            color: white;
+        }
+        
+        a:link:active,
+        a:link:visited {
+            color: black;
+        }
+        
+        @keyframes first {
+            0% {
+                letter-spacing: 0.09rem;
+            }
+            50% {
+                letter-spacing: 1.2rem;
+            }
+            100% {
+                letter-spacing: 0.09rem;
+            }
         }
     </style>
 </head>
